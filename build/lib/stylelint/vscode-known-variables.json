@@ -738,7 +738,8 @@
 		"--vscode-window-activeBorder",
 		"--vscode-window-inactiveBorder",
 		"--vscode-multiDiffEditor-background",
-		"--vscode-multiDiffEditor-border"
+		"--vscode-multiDiffEditor-border",
+		"--vscode-multiDiffEditor-headerBackground"
 	],
 	"others": [
 		"--background-dark",
