@@ -84,6 +84,12 @@ export class ChatViewPane extends ViewPane implements IChatViewPane {
 				}
 			}
 		}));
+		this._register(this.chatService.onDidUnregisterProvider(({ providerId }) => {
+			if (providerId === this.chatViewOptions.providerId) {
+				this.clear();
+				this._onDidChangeViewWelcomeState.fire();
+			}
+		}));
 	}
 
 	private updateModel(model?: IChatModel | undefined, viewState?: IViewPaneState): void {
